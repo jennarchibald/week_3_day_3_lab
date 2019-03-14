@@ -48,4 +48,9 @@ attr_accessor :name
     result = SqlRunner.run(sql, values).first
     return Artist.new(result)
   end
+
+  def self.delete_all
+    sql = "DELETE FROM artists"
+    SqlRunner.run(sql)
+  end
 end

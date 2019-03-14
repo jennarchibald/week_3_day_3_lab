@@ -51,4 +51,9 @@ class Album
     return Album.new(result)
   end
 
+  def self.delete_all
+    sql = "DELETE FROM albums"
+    SqlRunner.run(sql)
+  end
+
 end
