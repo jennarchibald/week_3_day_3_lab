@@ -6,7 +6,7 @@ class SqlRunner
       db.prepare("query", sql)
       db.exec_prepared("query", values)
     ensure
-      db.close()
+      db.close() id db !=nil
     end
   end
 end
